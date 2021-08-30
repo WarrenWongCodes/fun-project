@@ -8,7 +8,8 @@
     "start": "node server",
     "start:dev": "nodemon server",
     "build": "webpack --mode production",
-    "build:dev": "webpack -w --mode development"
+    "build:dev": "webpack -w --mode development",
+    "seed": "mysql -u root -p < server/database/schema.sql"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
     "pg": "^8.7.1",
     "react": "^17.0.2",

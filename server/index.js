@@ -3,6 +3,7 @@ var app = express();
 var router = require('./routes/index.js');
 const port = process.env.PORT || 3000;
 const morgan = require('morgan');
+const connection = require('./database');
 
 app.use(express.static(__dirname + '/../dist/'));
 app.use(morgan('dev'));
