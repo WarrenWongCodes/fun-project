@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'client/index.jsx'),
+  entry: path.resolve(__dirname, 'client/index'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -24,6 +24,9 @@ module.exports = {
         exclude: [/node_modules/],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.tsx', '.ts'],
   },
   mode: 'development',
   devtool: 'eval-source-map',
